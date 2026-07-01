@@ -186,6 +186,34 @@ All 40 skills, grouped by phase of the **Roblox game development lifecycle (GDLC
 
 ## How the skills fit together
 
+```mermaid
+flowchart TD
+    Setup["⚙️ setup-roblox-skills<br/><i>run once · writes the CLAUDE.md routing block</i>"] --> Router
+    Router["🧭 roblox-game-development-lifecycle<br/><i>umbrella router</i>"] --> P1
+
+    P1["1 · Research"] --> P2["2 · Concept &amp; Core Loop"] --> Spec
+
+    Spec["3 · Spec &amp; Slice<br/>roblox-to-prd → roblox-to-issues → roblox-triage"] --> Build
+    Build["4–6 · Build ONE slice<br/><i>prototype · vertical slice · production</i>"] --> QA
+    QA["7 · QA &amp; Security<br/><i>playtest in Studio</i>"] -->|"build next slice ↻"| Spec
+
+    QA --> Soft["8 · Soft Launch"] --> Polish["9 · Polish &amp; Balance"] --> Launch["10 · Publish &amp; Launch"]
+    Launch --> Live["11 · Live Ops"] --> Maint["12 · Maintenance &amp; Growth"]
+    Live -.->|new content| Spec
+    Maint -.->|new features / fixes| Spec
+
+    Any["🧩 Standalone · usable at any phase<br/>handoff · zoom-out · write-a-skill"]
+
+    classDef loop fill:#fff3e0,stroke:#e8890c,stroke-width:2px,color:#7a4a00;
+    classDef entry fill:#ede7f6,stroke:#7e57c2,color:#3d2c6d;
+    classDef util fill:#e3f2fd,stroke:#42a5f5,color:#0d47a1;
+    class Spec,Build,QA loop;
+    class Setup,Router entry;
+    class Any util;
+```
+
+> The orange loop is the point: **spec → slice → build one piece → playtest → repeat.** Never build the whole game in one pass. Live Ops and Maintenance feed new work back into the same slice cycle.
+
 Start broad, then go deep. The **`roblox-game-development-lifecycle`** skill acts as a router: describe a high-level goal ("build a new game", "make this profitable", "plan the roadmap") and it hands off to the right specialists for each phase — ideation, architecture, systems, UX, economy, security, QA, publishing, and live ops.
 
 **Two things keep the AI on track:**
