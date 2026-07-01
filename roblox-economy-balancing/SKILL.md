@@ -47,3 +47,7 @@ Return:
 - Monetization fairness notes.
 - Playtest metrics to collect.
 
+## Next
+
+Protect the tuned economy from exploits with `roblox-security-economy`, and instrument sources and sinks with `roblox-analytics-instrumentation` to watch for inflation live.
+

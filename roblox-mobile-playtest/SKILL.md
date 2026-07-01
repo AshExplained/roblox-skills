@@ -45,3 +45,7 @@ Return:
 - Console or performance risks.
 - Highest-impact fixes before launch.
 
+## Next
+
+Run the full first-session pass with `roblox-playtest-qa`, and send any defect to `roblox-debugging-bugfix`.
+

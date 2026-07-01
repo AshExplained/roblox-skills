@@ -51,3 +51,7 @@ Return:
 - Retention goal.
 - Verification steps.
 
+## Next
+
+Secure any player-to-player value exchange (trading, gifting) with `roblox-security-economy`, then verify the social flow with `roblox-playtest-qa`.
+

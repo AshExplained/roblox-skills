@@ -51,3 +51,7 @@ Return:
 - Abuse risks.
 - Implementation and verification plan.
 
+## Next
+
+Wire admin and ops signals into `roblox-analytics-instrumentation`, and route surfaced player issues through `roblox-community-ops`.
+

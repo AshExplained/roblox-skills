@@ -60,3 +60,7 @@ Never edit a Roblox script you have not read in the current task context.
 ## Roadmap Discipline
 
 Only mark roadmap items complete after implementation, testing, and explicit human approval. Use an awaiting-approval marker when a feature is built and tested but not yet approved.
+
+## Next
+
+With Studio connected, move to the task at hand — usually `roblox-luau-architecture` for code, `roblox-ui-implementation` for UI, or `roblox-debugging-bugfix` for a bug. Use `roblox-game-development-lifecycle` if you are unsure what to work on.

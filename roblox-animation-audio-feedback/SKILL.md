@@ -46,3 +46,7 @@ Return:
 - Mobile performance risks.
 - Verification notes.
 
+## Next
+
+Confirm the added juice does not hurt mobile frame rate with `roblox-performance-optimization` and `roblox-mobile-playtest`.
+

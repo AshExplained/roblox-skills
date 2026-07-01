@@ -62,3 +62,7 @@ Return:
 - Visual-fit notes.
 - Performance risks.
 - Verification performed.
+
+## Next
+
+Audit any imported third-party asset with `roblox-creator-store-security-audit` before trusting it, and check its cost with `roblox-performance-optimization`.

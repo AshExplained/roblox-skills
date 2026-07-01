@@ -43,3 +43,7 @@ Return:
 - Analytics events.
 - Experiments to run.
 
+## Next
+
+Check offers against platform rules with `roblox-policy-compliance`, and measure conversion with `roblox-analytics-instrumentation`.
+

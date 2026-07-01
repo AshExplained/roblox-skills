@@ -56,3 +56,7 @@ Return:
 - Failure modes handled.
 - Manual tests still needed in published or multi-server conditions.
 
+## Next
+
+Harden the save path against exploits with `roblox-security-economy`, then verify saves survive rejoin and shutdown with `roblox-playtest-qa`.
+

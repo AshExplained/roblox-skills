@@ -91,3 +91,7 @@ For broad planning requests, return:
 
 For implementation requests, act on the current phase instead of only describing the plan.
 
+## Next
+
+Route to the specialist skills for the current phase (listed above). For anything you are about to build, pass it through `roblox-to-prd` → `roblox-to-issues` → `roblox-triage` first so it lands one playtestable slice at a time instead of all at once.
+

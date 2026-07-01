@@ -92,3 +92,7 @@ Report:
 - Security-sensitive settings checked.
 - Final verdict and follow-up tests.
 
+## Next
+
+Once an asset is cleared, bring it in through `roblox-asset-pipeline` and check its runtime cost with `roblox-performance-optimization`.
+

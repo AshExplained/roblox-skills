@@ -46,3 +46,7 @@ Return:
 - Live-ops content pipeline.
 - Biggest retention and production risks.
 
+## Next
+
+Fold the chosen patterns into a concept with `roblox-game-ideas`, lock it with `roblox-to-prd`, and shape the first-session flow with `roblox-game-ux`.
+

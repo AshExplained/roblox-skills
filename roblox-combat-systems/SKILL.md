@@ -55,3 +55,7 @@ Return:
 - Feedback hooks.
 - Exploit and regression tests.
 
+## Next
+
+Validate every combat remote and damage path with `roblox-security-economy`, add impact with `roblox-animation-audio-feedback`, and verify with `roblox-playtest-qa` and `roblox-mobile-playtest`.
+

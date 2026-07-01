@@ -50,3 +50,7 @@ Return:
 - Save requirements.
 - Day 1, Day 3, and Day 7 retention impact.
 
+## Next
+
+Tune the reward pacing with `roblox-economy-balancing`, persist progress with `roblox-datastore-persistence`, and verify claims cannot be spoofed with `roblox-security-economy`.
+

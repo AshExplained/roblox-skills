@@ -61,3 +61,7 @@ Return:
 - Launch-day checklist.
 - Metrics and iteration plan.
 - Risks where marketing promise and gameplay reality diverge.
+
+## Next
+
+Measure campaign performance with `roblox-analytics-instrumentation`, and keep acquired players with the retention plan in `roblox-liveops-roadmap`.

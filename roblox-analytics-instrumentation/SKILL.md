@@ -51,3 +51,7 @@ Return:
 - Server/client ownership.
 - Validation plan after implementation.
 
+## Next
+
+Act on what the data shows: tune with `roblox-economy-balancing` or `roblox-retention-monetization`, and schedule the follow-up work with `roblox-liveops-roadmap`.
+

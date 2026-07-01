@@ -44,3 +44,7 @@ Return:
 - Mobile readability fixes.
 - Highest-impact changes before launch.
 
+## Next
+
+Verify readability and input across devices with `roblox-mobile-playtest` and `roblox-playtest-qa`.
+

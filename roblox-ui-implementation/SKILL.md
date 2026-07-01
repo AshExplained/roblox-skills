@@ -9,6 +9,15 @@ description: Implement Roblox UI in Studio. Use for ScreenGui, HUDs, menus, mobi
 
 Build Roblox UI that is readable, responsive, touch-friendly, and connected to real game state without trusting the client for valuable decisions.
 
+## Design Gate (read before building)
+
+Do not improvise UI. Before building a non-trivial surface, read its approved design brief:
+
+- `design/DESIGN.md` — global palette, type scale, spacing, and patterns.
+- `design/features/<feature-slug>/design.md` — this surface's layout, states, and mobile/tablet/desktop behavior. It must say `Status: approved`.
+
+If the brief is missing or still `draft`, stop and run `roblox-game-ux` to produce and approve it first (or get an explicit user override). Build every state the brief specifies — default, empty, loading, error, and permission/locked — not just the happy path, and match the mobile/tablet/desktop behavior it describes.
+
 ## Architecture
 
 - Keep UI construction and state updates in client-side controllers.
@@ -50,5 +59,10 @@ Confirm:
 - Buttons have obvious affordances and state.
 - UI does not block first action.
 - Valuable actions are server-validated.
+- The built surface matches the approved design brief across mobile, tablet, and desktop, including empty/loading/error states.
 - No new console errors.
+
+## Next
+
+Verify the surface with `roblox-mobile-playtest` and `roblox-playtest-qa`. If the UI drove new server actions, review the trust boundary with `roblox-security-economy`. Return to `roblox-to-issues` / `roblox-game-development-lifecycle` for the next slice.
 

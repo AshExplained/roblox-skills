@@ -59,3 +59,7 @@ Return:
 - Rollback or mitigation plan.
 - Post-release watchlist.
 
+## Next
+
+After release, watch metrics with `roblox-analytics-instrumentation` and player sentiment with `roblox-community-ops`; hand any live bug to `roblox-debugging-bugfix`.
+

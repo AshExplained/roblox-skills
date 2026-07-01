@@ -62,3 +62,7 @@ Report:
 - Abuse cases prevented.
 - Remaining risks or manual Roblox purchase tests.
 
+## Next
+
+Verify the protected flows in a playtest with `roblox-playtest-qa`, and confirm the save path is safe with `roblox-datastore-persistence`.
+

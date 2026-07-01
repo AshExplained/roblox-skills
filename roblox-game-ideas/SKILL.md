@@ -56,7 +56,24 @@ Score concepts from 1-5 on:
 
 Prefer fewer, sharper concepts over many vague ones. If a concept scores poorly on first-session clarity or mobile fit, revise it before recommending it.
 
+## Grilling Mode (stress-test a chosen concept)
+
+Once the user has picked a direction, switch from generating to **grilling** — interview them one question at a time to find the holes before any code is written. This is where a fuzzy concept becomes a buildable one.
+
+- Ask **one question at a time** and wait for the answer before the next. For each, offer your recommended answer.
+- Walk the design tree in dependency order: core loop → first 30 seconds → progression → economy → social → monetization → mobile controls → live-ops cadence. Resolve each before moving on.
+- **Probe with concrete scenarios**, not abstractions: "A new mobile player spawns with 0 coins — what is the very first tap, and what does it give them?"
+- **Sharpen fuzzy terms** into one canonical word the whole project will use ("is it a *coin*, a *gem*, or a *token*? pick one"). Consistent vocabulary now saves confusion in every later skill.
+- **Pressure-test against the Winner Checklist and Anti-Patterns** above — if an answer implies a long tutorial, desktop-only control, or pay-to-win shortcut, call it out immediately.
+- Capture resolved decisions as you go (in the concept notes or, if the project uses one, `CONTEXT.md`) so they aren't re-litigated later.
+
+Stop when the core loop, first session, and monetization are concrete enough to write down without hand-waving.
+
 ## Anti-Patterns
 
 Avoid concepts that depend on forced cutscenes, long tutorials, desktop-only controls, hidden progression, harsh early penalties, pay-to-win shortcuts, or content that exhausts before the 2-3 hour mark.
+
+## Next
+
+When the concept survives grilling, lock it into a spec with `roblox-to-prd`, then break it into playtestable slices with `roblox-to-issues`. To apply proven mechanics for the chosen genre, use `roblox-genre-patterns`; to shape the first-session flow, use `roblox-game-ux`.
 

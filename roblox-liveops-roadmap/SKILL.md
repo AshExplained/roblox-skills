@@ -56,3 +56,7 @@ For roadmap work, provide:
 - Approval gate.
 - Risks to retention, monetization fairness, or mobile performance.
 
+## Next
+
+Break the roadmap into playtestable slices with `roblox-to-issues`, and ship each update through `roblox-release-operations`.
+

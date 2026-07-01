@@ -51,3 +51,21 @@ When reviewing a Roblox UX, report:
 - Monetization interruptions.
 - Priority fixes ranked by retention impact.
 
+## Design The UI Before It Is Built
+
+For any non-trivial UI surface, produce and get approval on a **UI design artifact** before `roblox-ui-implementation` builds it. This is the visual contract; it prevents Claude from improvising layout, states, and mobile behavior mid-build. Roblox UI is built in Studio, so the artifact is a markdown design brief (optionally with reference images/screenshots), not an HTML mockup.
+
+Create it under `design/features/<feature-slug>/design.md` (global patterns live in `design/DESIGN.md`; see `docs/agents/design.md`). The brief must cover:
+
+- User goal and which surface/flow this is (HUD, shop, reward, menu…).
+- Layout and responsive behavior across **mobile, tablet, and desktop**, including safe areas and thumb zones.
+- Every relevant state: **default, empty, loading, error, and permission/locked**.
+- Interactions and copy rules.
+- A `Status:` line — `draft` until the user approves, then `approved`.
+
+Iterate with the user until they approve, then set `Status: approved`. A UI slice cannot become `ready-to-build` (in `roblox-to-issues` / `roblox-triage`) until this artifact is approved.
+
+## Next
+
+Once the design brief is approved, hand it to `roblox-ui-implementation` to build. If the UI is part of a larger feature, slice it with `roblox-to-issues`. Verify the built result with `roblox-mobile-playtest` and `roblox-playtest-qa`.
+

@@ -28,6 +28,16 @@ Improve code health without changing player-facing behavior accidentally.
 - Unclear names around valuable state.
 - Magic numbers that should be balance tables.
 
+## Finding Deepening Opportunities
+
+Beyond obvious cleanup, hunt for **shallow modules** to deepen — where the interface is nearly as complex as the implementation, so callers carry complexity that should be hidden.
+
+- Where does understanding one concept require bouncing between many tiny scripts?
+- Where were pure helpers extracted only for tidiness, but the real bugs live in how they're called (no locality)?
+- Where do client and server share a responsibility that leaks across the remote boundary?
+
+Apply the **deletion test** to anything you suspect is shallow: if deleting it just moves complexity around, inline it; if deleting it would scatter the same complexity across many call sites, keep it and give it a small, stable interface named from the game's vocabulary. Present each opportunity as: files involved · the friction today · the proposed change · the benefit (locality + testability). Don't propose new indirection for a single implementation. See `roblox-luau-architecture` for the deep-module model.
+
 ## MCP Workflow
 
 1. Use `script_grep` to find duplication, old names, or call sites.
@@ -45,4 +55,8 @@ Return:
 - Scripts changed.
 - Verification performed.
 - Follow-up debt items.
+
+## Next
+
+Verify no behavior changed with `roblox-playtest-qa`. For larger structural changes, design them in `roblox-luau-architecture` and slice them with `roblox-to-issues` so they land one safe step at a time.
 

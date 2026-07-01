@@ -61,3 +61,7 @@ When planning a retention or monetization system, include:
 - Abuse/exploit risks.
 - Implementation checkpoints for server validation.
 
+## Next
+
+Sequence the retention and event work with `roblox-liveops-roadmap`, and track its impact with `roblox-analytics-instrumentation`.
+

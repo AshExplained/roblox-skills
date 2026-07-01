@@ -49,3 +49,7 @@ Return:
 - Fixes ranked by likely player impact.
 - Verification steps and any tradeoffs.
 
+## Next
+
+Confirm the gains on-device with `roblox-mobile-playtest`, and re-run `roblox-playtest-qa` to make sure nothing regressed.
+

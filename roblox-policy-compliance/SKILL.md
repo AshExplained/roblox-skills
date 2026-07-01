@@ -49,3 +49,7 @@ Return:
 - Required or recommended changes.
 - Unresolved policy questions.
 - Official sources used.
+
+## Next
+
+Apply any required disclosures to the store page with `roblox-publishing-discovery`, and gate the build on the compliance checklist in `roblox-release-operations`.
