@@ -17,6 +17,7 @@ If you are building **Roblox games with AI** — using **Claude Code**, the **Cl
 - [Why this repo](#why-this-repo)
 - [What is a Claude Code skill?](#what-is-a-claude-code-skill)
 - [Installation](#installation)
+- [⚠️ Required first step: run `setup-roblox-skills`](#️-required-first-step-run-setup-roblox-skills-in-every-project)
 - [Quick start](#quick-start)
 - [Skill catalog](#skill-catalog)
 - [How the skills fit together](#how-the-skills-fit-together)
@@ -64,11 +65,25 @@ git clone https://github.com/AshExplained/roblox-skills.git ~/.claude/skills/rob
 git clone https://github.com/AshExplained/roblox-skills.git "$env:USERPROFILE\.claude\skills\roblox-skills"
 ```
 
-Each subfolder contains one `SKILL.md`. Claude Code discovers them automatically — no extra configuration needed.
+Each subfolder contains one `SKILL.md`. Claude Code discovers the skills automatically once they're installed.
+
+## ⚠️ Required first step: run `setup-roblox-skills` in every project
+
+**Before anything else — and once per game project — run [`setup-roblox-skills`](setup-roblox-skills/SKILL.md).**
+
+```
+setup-roblox-skills
+```
+
+Installing the skills only makes them *available*. This setup step is what makes Claude **use them correctly every time**: it injects a `## Roblox Skills` block into your project's `CLAUDE.md` containing the lifecycle map, every skill's purpose/use-case/trigger words, the next-skill routing, and your tracker/design config. Because it lives in `CLAUDE.md`, Claude reads it at the start of **every** session — so it always knows which skill to reach for and what to run next, instead of guessing.
+
+Skip this step and the skills still load, but Claude won't have the lifecycle context that keeps it building in vertical slices and routing between skills. Re-run it only if you change trackers or want to refresh the block.
+
+> Reminder: `setup-roblox-skills` writes only planning config to `CLAUDE.md`. Your game's Luau code stays in the Roblox cloud experience — see [Git tracks planning, not code](#how-the-skills-fit-together).
 
 ## Quick start
 
-Once installed, just describe what you want in natural language. Claude picks the right skill:
+After setup, just describe what you want in natural language. Claude picks the right skill:
 
 - *"Give me 3 mobile-first Roblox simulator ideas with fair monetization."* → `roblox-game-ideas`
 - *"Design a server-authoritative currency system that resists dupes."* → `roblox-security-economy`
@@ -77,7 +92,7 @@ Once installed, just describe what you want in natural language. Claude picks th
 
 ## Skill catalog
 
-All 34 skills, grouped by phase of the **Roblox game development lifecycle (GDLC)**.
+All 40 skills, grouped by phase of the **Roblox game development lifecycle (GDLC)**. Start with `setup-roblox-skills` (see above), then the umbrella `roblox-game-development-lifecycle` router.
 
 ### 🚀 Orchestration & Strategy
 
