@@ -10,6 +10,8 @@ Wire the Roblox skill pack into a specific game project so every skill knows the
 
 This is a prompt-driven skill, not a script. Explore, ask a few short questions, confirm, then write.
 
+**The tracker is for planning, not code.** The game's Luau code and instances live in the Roblox cloud experience and are edited through Studio MCP (`roblox-studio-workflow`) — never committed to Git. Git / the tracker holds only planning artifacts: `ROADMAP.md`, PRDs, slices, and UI design briefs. Make this explicit when setting up.
+
 ## What it writes
 
 1. A **`## Roblox Skills`** block in the project's `CLAUDE.md`, containing:

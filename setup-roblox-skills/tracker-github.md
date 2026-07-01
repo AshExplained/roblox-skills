@@ -2,6 +2,8 @@
 
 Slices, PRDs, and bugs for this game live as GitHub issues. Use the `gh` CLI. Propose this only if the project has a GitHub remote (`git remote -v`).
 
+**Issues only — not code.** GitHub here is an issue tracker, not the game's source of truth. The Luau code and instances live in the Roblox cloud experience and are edited through Studio MCP; do not commit game code to this repo. If the repo exists at all, it should contain only planning artifacts (`ROADMAP.md`, PRDs, slices, design briefs) — add a `.gitignore` for any local Studio/Rojo exports so they never get committed.
+
 ## Conventions
 
 - **Create:** `gh issue create --title "..." --body "..."` (heredoc for multi-line bodies).

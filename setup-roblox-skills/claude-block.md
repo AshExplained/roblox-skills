@@ -105,7 +105,10 @@ Run roughly in this order; loop back as needed. Don't scale content until the co
 - **handoff** — write a durable handoff doc for the next session/agent. *Use when:* context is deep and work is about to switch. *Triggers:* "handoff", "summarize for next session".
 - **zoom-out** — map an unfamiliar area before changing it. *Use when:* you don't know how a system fits together. *Triggers:* "zoom out", "big picture", "map this".
 - **write-a-skill** — author a new skill for this pack. *Use when:* adding/editing a skill. *Triggers:* "write a skill", "create a skill".
-- **caveman** — ultra-terse output mode. *Use when:* the user wants brevity. *Triggers:* "caveman mode", "be brief", "less tokens". Off with "normal mode".
+
+### Where the code lives
+
+The game's Luau code and instances live in the **Roblox cloud experience** and are edited through Studio MCP (`roblox-studio-workflow`) — they are **not stored in Git**. Git / the tracker holds only **planning artifacts**: `ROADMAP.md`, PRDs, slices, and UI design briefs. Never commit game code here, and never treat a Git checkout as the source of truth for the place — the cloud experience is.
 
 ### Project config
 

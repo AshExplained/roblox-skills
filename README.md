@@ -1,9 +1,9 @@
-# Roblox Skills for Claude Code — 41 AI Skills for Roblox Game Development
+# Roblox Skills for Claude Code — 40 AI Skills for Roblox Game Development
 
 > A curated pack of **Claude Code / Claude Agent skills** covering the full **Roblox game development lifecycle** — from game ideas and Luau architecture to monetization, retention, live ops, security, and Roblox Studio MCP workflows. Includes a **vertical-slice workflow** (PRD → issues → triage) that stops the AI from trying to build a whole game in one broken pass.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Skills](https://img.shields.io/badge/skills-41-blue.svg)](#skill-catalog)
+[![Skills](https://img.shields.io/badge/skills-40-blue.svg)](#skill-catalog)
 [![Made for Roblox](https://img.shields.io/badge/platform-Roblox-red.svg)](https://create.roblox.com/)
 [![Luau](https://img.shields.io/badge/language-Luau-000080.svg)](https://luau.org/)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
@@ -168,7 +168,6 @@ All 34 skills, grouped by phase of the **Roblox game development lifecycle (GDLC
 | [`handoff`](handoff/SKILL.md) | Compacts a long session into a durable handoff doc for the next session/agent. |
 | [`zoom-out`](zoom-out/SKILL.md) | Maps an unfamiliar area and its callers before you change it. |
 | [`write-a-skill`](write-a-skill/SKILL.md) | Authors a new skill with proper structure and triggers. |
-| [`caveman`](caveman/SKILL.md) | Ultra-terse output mode to cut token usage. |
 
 ## How the skills fit together
 
@@ -178,6 +177,8 @@ Start broad, then go deep. The **`roblox-game-development-lifecycle`** skill act
 
 1. **Setup once.** Run [`setup-roblox-skills`](setup-roblox-skills/SKILL.md) in your game project. It writes a routing block into `CLAUDE.md` so every skill knows the lifecycle, its neighbors, and **ends by telling you which skill to run next** — each skill also carries a `## Next` tip for this.
 2. **Build in vertical slices.** Instead of generating an entire game in one pass, go **concept → [`roblox-to-prd`](roblox-to-prd/SKILL.md) → [`roblox-to-issues`](roblox-to-issues/SKILL.md) → [`roblox-triage`](roblox-triage/SKILL.md) → build one slice → playtest → repeat.** Each slice cuts through client, server, remotes, data, and UI for one small player-facing capability that you can verify in Studio on its own.
+
+> **Git tracks planning, not code.** Your game's Luau and instances live in the **Roblox cloud experience** and are edited through Studio MCP — they are never committed to Git. The tracker (GitHub issues or a local `roadmap/` folder) holds only planning artifacts: the roadmap, PRDs, slices, and UI design briefs.
 
 Several core skills also carry battle-tested engineering discipline: [`roblox-debugging-bugfix`](roblox-debugging-bugfix/SKILL.md) builds a reproduction loop and ranks falsifiable hypotheses before touching a fix; [`roblox-game-ux`](roblox-game-ux/SKILL.md) produces an approved UI design brief before [`roblox-ui-implementation`](roblox-ui-implementation/SKILL.md) builds it; and [`roblox-luau-architecture`](roblox-luau-architecture/SKILL.md) applies the deep-module / deletion-test lens.
 
